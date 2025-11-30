@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glasgow Digital | Websites that level up your business</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <style>
     body { background-color: #F3F4F6; }
@@ -177,7 +179,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$500</p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl package-btn"
+            data-package="Website Only ($500)">
             Order Website
           </button>
         </div>
@@ -199,7 +203,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$350 + $25/mo</p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl package-btn"
+            data-package="Website + Hosting ($350 + $25/mo)">
             Get Started
           </button>
         </div>
@@ -217,7 +223,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$700–$2000+</p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl package-btn"
+            data-package="Premium Website ($700–$2000+)">
             Contact for Quote
           </button>
         </div>
@@ -241,7 +249,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$25<span class="text-base">/mo</span></p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl maintenance-btn"
+            data-maintenance="Basic ($25/mo)">
             Choose Basic
           </button>
         </div>
@@ -258,7 +268,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$50<span class="text-base">/mo</span></p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl maintenance-btn"
+            data-maintenance="Standard ($50/mo)">
             Choose Standard
           </button>
         </div>
@@ -275,7 +287,9 @@
 
           <p class="text-blue-600 font-bold text-3xl mt-6">$100<span class="text-base">/mo</span></p>
 
-          <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl">
+          <button
+            class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl maintenance-btn"
+            data-maintenance="Premium ($100/mo)">
             Choose Premium
           </button>
         </div>
@@ -329,6 +343,7 @@
   <section id="contact" class="max-w-6xl mx-auto px-4 py-16 fade-in mb-10">
     <div class="grid md:grid-cols-2 gap-10 items-start">
 
+      <!-- CONTACT FORM CARD -->
       <div class="bg-white rounded-3xl shadow-sm border border-gray-200 p-8">
 
         <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
@@ -336,50 +351,110 @@
         </h2>
 
         <p class="text-gray-600 text-sm md:text-base mb-4">
-          Interested in a website? Send a message and I’ll get back with a plan & quote.
+          Interested in a website? Choose your plan, add details, and I’ll get back with a plan & quote.
         </p>
 
         <div class="space-y-2 text-sm text-gray-700 mb-6">
-          <p><span class="font-semibold">Email:</span> example@gmail.com</p>
+          <p><span class="font-semibold">Email:</span> Glasgow.Digital10@gmail.com</p>
           <p><span class="font-semibold">Phone:</span> (555) 555-5555</p>
         </div>
 
-        <form class="space-y-4 text-sm">
-          <input type="text" placeholder="Your Name"
-                 class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none" />
+        <form id="contactForm" class="space-y-4 text-sm">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none"
+            required
+          />
 
-          <input type="email" placeholder="Your Email"
-                 class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none"
+            required
+          />
 
-          <textarea placeholder="Tell me about your business..."
-                    class="w-full p-3 h-28 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone"
+            class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none"
+          />
+
+          <!-- WEBSITE PACKAGE SELECT -->
+          <div>
+            <label class="block mb-1 text-gray-700 font-medium">Website Package</label>
+            <select
+              id="packageSelect"
+              name="package"
+              class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none"
+              required
+            >
+              <option value="">Select a package</option>
+              <option value="Website Only ($500)">Website Only ($500)</option>
+              <option value="Website + Hosting ($350 + $25/mo)">Website + Hosting ($350 + $25/mo)</option>
+              <option value="Premium Website ($700–$2000+)">Premium Website ($700–$2000+)</option>
+            </select>
+          </div>
+
+          <!-- MAINTENANCE PLAN SELECT -->
+          <div>
+            <label class="block mb-1 text-gray-700 font-medium">Maintenance Plan</label>
+            <select
+              id="maintenanceSelect"
+              name="maintenance"
+              class="w-full p-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none"
+              required
+            >
+              <option value="">Select a maintenance plan</option>
+              <option value="None">None</option>
+              <option value="Basic ($25/mo)">Basic ($25/mo)</option>
+              <option value="Standard ($50/mo)">Standard ($50/mo)</option>
+              <option value="Premium ($100/mo)">Premium ($100/mo)</option>
+            </select>
+          </div>
+
+          <!-- MESSAGE -->
+          <textarea
+            name="message"
+            placeholder="Tell me about your business and what you want your website to do."
+            class="w-full p-3 h-28 rounded-xl border border-gray-300 focus:ring-blue-500 focus:outline-none resize-none"
+            required
+          ></textarea>
 
           <button
+            type="submit"
             class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition">
-            Send Message
+            Send Request
           </button>
         </form>
       </div>
 
+      <!-- SIDE INFO -->
       <div class="space-y-6">
 
         <div class="bg-blue-50 border border-blue-100 rounded-3xl p-6 text-sm text-blue-900">
           <h3 class="text-lg font-bold mb-2">How it works</h3>
           <ol class="list-decimal list-inside space-y-1">
-            <li>You tell me what kind of site you need.</li>
-            <li>I send a simple plan and price.</li>
-            <li>After approval, I build and launch your site.</li>
+            <li>You choose your website + maintenance plan.</li>
+            <li>You send details about what you need.</li>
+            <li>I reply with a plan, timeline, and draft.</li>
+            <li>After you approve, I send payment links.</li>
           </ol>
         </div>
 
         <div class="bg-white border border-gray-200 rounded-3xl p-6 text-sm text-gray-700">
-          <h3 class="text-lg font-bold mb-2 text-gray-900">Payment Options</h3>
-          <p class="mb-2">Simple, secure online payments through Stripe or invoice.</p>
+          <h3 class="text-lg font-bold mb-2 text-gray-900">Payment Process</h3>
+          <p class="mb-2">
+            You won’t be charged until you approve the website.
+          </p>
 
           <ul class="list-disc list-inside space-y-1 text-gray-600">
-            <li>One-time payments for Website packages.</li>
-            <li>Subscriptions for maintenance plans.</li>
-            <li>Email invoices available on request.</li>
+            <li>One-time payment for the website package.</li>
+            <li>Separate subscription for maintenance plan.</li>
+            <li>All payments handled securely online.</li>
           </ul>
         </div>
 
@@ -388,10 +463,108 @@
   </section>
 
 
+  <!-- SUCCESS MODAL -->
+  <div
+    id="successModal"
+    class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden"
+  >
+    <div class="bg-white rounded-2xl shadow-xl max-w-sm w-full mx-4 p-6 text-center">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Request Sent!</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Thank you for reaching out. I’ll review your details and get back to you as soon as possible.
+      </p>
+      <button
+        id="closeModalBtn"
+        class="mt-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+
+
   <!-- FOOTER -->
   <footer class="border-t border-gray-200 py-6 text-center text-xs text-gray-500">
     © 2025 Glasgow Digital. All rights reserved.
   </footer>
+
+  <!-- JS: EmailJS + button behavior -->
+  <script>
+    // Init EmailJS
+    (function() {
+      emailjs.init("so2t_7EQnIb7_7Tg6"); // PUBLIC KEY
+    })();
+
+    const serviceID = "service_mliczjj";
+    const templateID = "template_vpj7tot";
+
+    const contactForm = document.getElementById("contactForm");
+    const successModal = document.getElementById("successModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const contactSection = document.getElementById("contact");
+    const packageSelect = document.getElementById("packageSelect");
+    const maintenanceSelect = document.getElementById("maintenanceSelect");
+
+    // Handle contact form submit
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+
+      const templateParams = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        package: formData.get("package"),
+        maintenance: formData.get("maintenance"),
+        message: formData.get("message")
+      };
+
+      emailjs.send(serviceID, templateID, templateParams)
+        .then(function() {
+          // Show success modal
+          successModal.classList.remove("hidden");
+          contactForm.reset();
+        })
+        .catch(function(error) {
+          console.error("EmailJS error:", error);
+          alert("There was an error sending your request. Please try again or email Glasgow.Digital10@gmail.com directly.");
+        });
+    });
+
+    // Close modal
+    closeModalBtn.addEventListener("click", () => {
+      successModal.classList.add("hidden");
+    });
+
+    successModal.addEventListener("click", (e) => {
+      if (e.target === successModal) {
+        successModal.classList.add("hidden");
+      }
+    });
+
+    // Pricing buttons → scroll to contact + autofill package
+    document.querySelectorAll(".package-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const pkg = btn.getAttribute("data-package");
+        if (packageSelect) {
+          packageSelect.value = pkg;
+        }
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Maintenance buttons → scroll to contact + autofill maintenance
+    document.querySelectorAll(".maintenance-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const maint = btn.getAttribute("data-maintenance");
+        if (maintenanceSelect) {
+          maintenanceSelect.value = maint;
+        }
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
 
 </body>
 </html>
