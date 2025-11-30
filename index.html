@@ -1,142 +1,194 @@
-<!-- PRICING PAGE (Kentucky Blue Theme) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maddox Web Design | Portfolio & Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { background-color: #050509; }
+    .fade-in { animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body class="text-gray-100">
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full top-0 bg-black/80 backdrop-blur-lg border-b border-yellow-600/20 z-40">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <div class="text-xl font-extrabold text-yellow-500 tracking-wide">
+        Maddox Web Design
+      </div>
+      <div class="hidden md:flex space-x-6 font-semibold">
+        <a href="#services" class="hover:text-yellow-400">Services</a>
+        <a href="#plans" class="hover:text-yellow-400">Plans</a>
+        <a href="#portfolio" class="hover:text-yellow-400">Portfolio</a>
+        <a href="#about" class="hover:text-yellow-400">About</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pt-24"></div>
+
+  <!-- HERO -->
+  <header class="text-center py-24 fade-in bg-gradient-to-b from-black via-zinc-900 to-black">
+    <h1 class="text-5xl font-extrabold text-yellow-400 tracking-wide">
+      Websites That Level Up Your Business
+    </h1>
+    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+      I build fast, modern websites for small businesses, barbershops, sports leagues, creators & local organizations.
+    </p>
+    <a href="#contact"
+      class="mt-8 inline-block px-10 py-4 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition">
+      Work With Me
+    </a>
+  </header>
+
+  <!-- PRICING PAGE (Kentucky Blue Dark Theme) -->
 <section id="pricing" class="max-w-6xl mx-auto mt-20 p-8 fade-in">
-  <h2 class="text-4xl font-extrabold text-blue-600 text-center uppercase mb-10">
+
+  <h2 class="text-4xl font-extrabold text-blue-400 text-center uppercase mb-12 tracking-wide">
     Pricing Plans
   </h2>
 
-  <!-- Upfront Website Packages -->
+  <!-- MAIN WEBSITE PACKAGES -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
     <!-- Website Only -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold mb-3 text-blue-700">Website Only</h3>
-      <p class="text-gray-700 mb-4">Perfect for businesses that want full control.</p>
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold mb-3 text-blue-300">Website Only</h3>
+      <p class="text-gray-300 mb-4">Full ownership of your website. You handle hosting & domain.</p>
 
-      <ul class="space-y-2 text-gray-600">
+      <ul class="space-y-2 text-gray-400">
         <li>✔ Complete website build</li>
-        <li>✔ You own all files</li>
-        <li>✔ Delivered as a ZIP folder</li>
-        <li>✔ You handle hosting & domain</li>
-        <li>✔ No monthly fees</li>
+        <li>✔ Full ZIP file delivery</li>
+        <li>✔ You control all hosting</li>
+        <li>✔ No recurring fees</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$500</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$500</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Order Website
       </button>
     </div>
 
-    <!-- Standard Website -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold mb-3 text-blue-700">Website + Hosting</h3>
-      <p class="text-gray-700 mb-4">Best for small businesses wanting a full setup.</p>
+    <!-- Website + Hosting -->
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold mb-3 text-blue-300">Website + Hosting</h3>
+      <p class="text-gray-300 mb-4">We build it. We host it. You relax.</p>
 
-      <ul class="space-y-2 text-gray-600">
-        <li>✔ Full website build</li>
-        <li>✔ We handle domain setup</li>
-        <li>✔ We handle hosting</li>
+      <ul class="space-y-2 text-gray-400">
+        <li>✔ Fully built website</li>
+        <li>✔ Hosting included</li>
+        <li>✔ Domain setup included</li>
         <li>✔ Monthly updates included</li>
-        <li>✔ Free speed optimization</li>
+        <li>✔ Fast load optimization</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$350 + $25/mo</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$350 + $25/mo</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Get Started
       </button>
     </div>
 
     <!-- Premium Website -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold mb-3 text-blue-700">Premium Website</h3>
-      <p class="text-gray-700 mb-4">For businesses needing high-end features.</p>
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold mb-3 text-blue-300">Premium Website</h3>
+      <p class="text-gray-300 mb-4">Best for established brands needing custom features.</p>
 
-      <ul class="space-y-2 text-gray-600">
+      <ul class="space-y-2 text-gray-400">
         <li>✔ Unlimited pages</li>
-        <li>✔ Custom dashboards</li>
-        <li>✔ Advanced integrations</li>
+        <li>✔ Custom integrations</li>
+        <li>✔ Admin dashboards</li>
         <li>✔ Branding package</li>
         <li>✔ Priority support</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$700–$2000+</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$700–$2000+</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Contact for Quote
       </button>
     </div>
+
   </div>
 
-
-
-  <!-- Monthly Maintenance Plans -->
-  <h2 class="text-4xl font-extrabold text-blue-600 text-center uppercase mt-20 mb-10">
+  <!-- MAINTENANCE PLANS HEADER -->
+  <h2 class="text-4xl font-extrabold text-blue-400 text-center uppercase mt-24 mb-12 tracking-wide">
     Maintenance Plans
   </h2>
 
+  <!-- MONTHLY PLANS -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
     <!-- Basic -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Basic</h3>
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold text-blue-300 mb-4">Basic Plan</h3>
 
-      <ul class="space-y-2 text-gray-700">
+      <ul class="space-y-2 text-gray-300">
         <li>✔ Text & image updates</li>
         <li>✔ Bug fixes</li>
         <li>✔ Uptime monitoring</li>
         <li>✔ 1 update per month</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$25/mo</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$25/mo</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Choose Basic
       </button>
     </div>
 
     <!-- Standard -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Standard</h3>
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold text-blue-300 mb-4">Standard Plan</h3>
 
-      <ul class="space-y-2 text-gray-700">
-        <li>✔ Unlimited text/image updates</li>
+      <ul class="space-y-2 text-gray-300">
+        <li>✔ Unlimited updates</li>
+        <li>✔ SEO optimization</li>
         <li>✔ Speed optimization</li>
-        <li>✔ Monthly analytics report</li>
-        <li>✔ SEO improvements</li>
+        <li>✔ Monthly analytics</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$50/mo</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$50/mo</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Choose Standard
       </button>
     </div>
 
     <!-- Premium -->
-    <div class="bg-white p-8 rounded-xl shadow-lg border border-blue-300 hover:border-blue-500 transition">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Premium</h3>
+    <div class="bg-[#0A0F1F] p-8 rounded-xl border border-blue-700/40 hover:border-blue-400 shadow-xl hover:shadow-blue-500/20 transition-all">
+      <h3 class="text-2xl font-bold text-blue-300 mb-4">Premium Plan</h3>
 
-      <ul class="space-y-2 text-gray-700">
+      <ul class="space-y-2 text-gray-300">
         <li>✔ Unlimited updates</li>
         <li>✔ New pages anytime</li>
         <li>✔ Priority support</li>
-        <li>✔ Full management</li>
+        <li>✔ Full website management</li>
       </ul>
 
-      <p class="text-blue-700 font-bold text-3xl mt-6">$100/mo</p>
+      <p class="text-blue-400 font-bold text-3xl mt-6">$100/mo</p>
 
-      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg">
+      <button class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">
         Choose Premium
       </button>
     </div>
-  </div>
 
+  </div>
 
   <!-- CTA -->
   <div class="text-center mt-20">
-    <h3 class="text-3xl font-extrabold text-blue-700 mb-4">Not sure which plan to choose?</h3>
-    <p class="text-gray-600 text-lg mb-6">Message me and I’ll recommend the best option for your business.</p>
+    <h3 class="text-3xl font-extrabold text-blue-300 mb-4">Not sure which plan to choose?</h3>
+    <p class="text-gray-300 text-lg mb-6">Message me and I’ll recommend the best option for your business.</p>
 
     <a href="#contact"
       class="px-10 py-4 bg-blue-600 text-white font-bold text-lg rounded-lg hover:bg-blue-700 transition">
@@ -145,3 +197,11 @@
   </div>
 
 </section>
+
+
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-yellow-600/20">
+    © 2025 Maddox Web Design. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
